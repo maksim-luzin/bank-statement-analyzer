@@ -1,24 +1,27 @@
 import { FC, useCallback } from 'react';
-import { HeaderGroup, Row, Table as TableType } from '@tanstack/react-table';
+import {
+  HeaderGroup,
+  Row,
+  Table as TableType
+} from '@tanstack/react-table';
 import { flexRender } from '@tanstack/react-table';
 
 import {
   Table as TableUI,
-  TableHeader,
   TableRow,
   TableHead,
-  TableBody,
   TableCell,
-} from '@/shared/ui/components';
-import { ITransactionConvertRowErrors } from '@/entities/bank-statement-validation-row-errors/model/types';
+  TableHeader,
+  TableBody
+} from './table';
 
-interface ITable {
-  bankStatementValidationRowErrors: TableType<ITransactionConvertRowErrors>;
-}
+interface ITable<T> {
+  tableData: TableType<T>;
+};
 
-export const Table: FC<ITable> = ({ bankStatementValidationRowErrors }) => {
+export const TanstackTable = <T,>({ tableData }: ITable<T>) => {
   const tableHeadersRendering = useCallback(
-    (headerGroup: HeaderGroup<ITransactionConvertRowErrors>) => (
+    (headerGroup: HeaderGroup<T>) => (
       <TableRow key={headerGroup.id}>
         {headerGroup.headers.map((header) => (
           <TableHead key={header.id}>
@@ -33,7 +36,7 @@ export const Table: FC<ITable> = ({ bankStatementValidationRowErrors }) => {
   );
 
   const tableDataRendering = useCallback(
-    (row: Row<ITransactionConvertRowErrors>) => (
+    (row: Row<T>) => (
       <TableRow key={row.id} data-state={row.getIsSelected() && 'selected'}>
         {row.getVisibleCells().map((cell) => (
           <TableCell key={cell.id}>
@@ -49,16 +52,12 @@ export const Table: FC<ITable> = ({ bankStatementValidationRowErrors }) => {
     <div className='overflow-hidden rounded-md border'>
       <TableUI>
         <TableHeader>
-          {bankStatementValidationRowErrors
-            .getHeaderGroups()
-            .map(tableHeadersRendering)}
+          {tableData.getHeaderGroups().map(tableHeadersRendering)}
         </TableHeader>
         <TableBody>
-          {bankStatementValidationRowErrors
-            .getRowModel()
-            .rows.map(tableDataRendering)}
+          {tableData.getRowModel().rows.map(tableDataRendering)}
         </TableBody>
       </TableUI>
     </div>
-  );
-}
+  )
+};

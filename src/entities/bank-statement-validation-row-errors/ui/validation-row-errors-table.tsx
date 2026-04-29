@@ -1,7 +1,7 @@
 'use client'
 
-import { useBankStatementValidationRowErrors } from '../../hooks';
-import { Table } from './components/table';
+import { TanstackTable } from '@/shared/ui/components';
+import { useBankStatementValidationRowErrors } from '../hooks';
 
 export const ValidationRowErrorsTable = () => {
   const {
@@ -14,8 +14,8 @@ export const ValidationRowErrorsTable = () => {
   return (
     <section className='mt-8'>
       <h2 className='text-lg'>Таблиця помилок парсингу</h2>
-      <Table
-        bankStatementValidationRowErrors={bankStatementValidationRowErrorsTable}
+      <TanstackTable
+        tableData={bankStatementValidationRowErrorsTable}
       />
     </section>
   )

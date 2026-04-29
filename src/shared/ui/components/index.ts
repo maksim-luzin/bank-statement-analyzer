@@ -1,4 +1,4 @@
-export { Button, buttonVariants } from "./button"
+export { Button, buttonVariants } from './button';
 
 export {
   Card,
@@ -8,9 +8,9 @@ export {
   CardAction,
   CardDescription,
   CardContent,
-} from "./card"
+} from './card';
 
-export { Dropzone } from "./drop-zone"
+export { Dropzone } from './drop-zone';
 
 export {
   Field,
@@ -23,11 +23,11 @@ export {
   FieldSet,
   FieldContent,
   FieldTitle,
-} from "./field"
+} from './field';
 
-export { Input } from "./input"
+export { Input } from './input';
 
-export { Label } from "./label"
+export { Label } from './label';
 
 export {
   Select,
@@ -40,9 +40,9 @@ export {
   SelectSeparator,
   SelectTrigger,
   SelectValue,
-} from "./select"
+} from './select';
 
-export { Separator } from "./separator"
+export { Separator } from './separator';
 
 export {
   Table,
@@ -53,6 +53,8 @@ export {
   TableRow,
   TableCell,
   TableCaption,
-} from "./table"
+} from './table';
 
-export { Toaster } from "./sonner"
+export { Toaster } from './sonner';
+
+export { TanstackTable } from './tanstack-table';
