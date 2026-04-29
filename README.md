@@ -16,6 +16,6 @@ npm run dev
 This app was my first experience with shadcn/ui. 
 It also took me a while to figure out the architecture and the unexpected theme change.
 
-![Screenshot of the application screen](docs/app-screen.png)
+![Screenshot of the application screen](docs/app-screen.png)  
 
 <video controls src="docs/showing-app-in-action.mp4" title="Showing the application in action"></video>
