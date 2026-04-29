@@ -20,4 +20,4 @@ It also took me a while to figure out the architecture and the unexpected theme 
 ![Screenshot of the application screen](docs/app-screen.png)  
 
 ## Showing the application in action 
-<video controls src="docs/showing-app-in-action.mp4" title="Showing the application in action"></video>
+<video controls src="https://github.com/user-attachments/assets/a6f4b44f-e5a8-4ab2-abe6-e55e26d44e38" title="Showing the application in action"></video>
