@@ -1,21 +1,21 @@
-# Next.js template
+# Bank statement analyzer
 
-This is a Next.js template with shadcn/ui.
+[This is a bank statement analysis app.](https://bank-statement-analyzer-chi.vercel.app)
 
-## Adding components
+## Running the application locally
 
-To add components to your app, run the following command:
+To run the application locally, run the following command:
 
 ```bash
-npx shadcn@latest add button
+npm install  
+npm run dev
 ```
 
-This will place the ui components in the `components` directory.
+## Solution Description
 
-## Using components
+This app was my first experience with shadcn/ui. 
+It also took me a while to figure out the architecture and the unexpected theme change.
 
-To use the components in your app, import them as follows:
+![Screenshot of the application screen](docs/app-screen.png)
 
-```tsx
-import { Button } from "@/components/ui/button";
-```
+<video controls src="docs/showing-app-in-action.mp4" title="Showing the application in action"></video>
