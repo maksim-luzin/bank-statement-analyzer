@@ -1,0 +1,1 @@
+export { TotalTransactionInfo } from './total-transaction-info';
